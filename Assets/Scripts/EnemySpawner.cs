@@ -2,15 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Transform))]
-
-public class SpawnEnemy : MonoBehaviour
+public class EnemySpawner : MonoBehaviour
 {
     [SerializeField]
     private GameObject _enemyPrefab;
-
-    [SerializeField]
-    private Transform _spawnPath;
 
     private List<Transform> _spawnPoints;
 
@@ -20,11 +15,9 @@ public class SpawnEnemy : MonoBehaviour
 
     private void Start()
     {
-        _spawnPath = GetComponent<Transform>();
+        _spawnPoints = new List<Transform>(transform.childCount);
 
-        _spawnPoints = new List<Transform>(_spawnPath.childCount);
-
-        foreach (Transform point in _spawnPath)
+        foreach (Transform point in transform)
         {
             _spawnPoints.Add(point);
         }
@@ -50,7 +43,6 @@ public class SpawnEnemy : MonoBehaviour
             {
                 _currnetPoint = 0;
             }
-
 
             yield return waitForTwoSeconds;
         }
