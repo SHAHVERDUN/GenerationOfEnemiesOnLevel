@@ -24,10 +24,10 @@ public class EnemySpawner : MonoBehaviour
 
         _currnetPoint = 0;
 
-        StartCoroutine(CoroutineCreateEnemy());
+        StartCoroutine(SpawnEnemy());
     }
 
-    private IEnumerator CoroutineCreateEnemy()
+    private IEnumerator SpawnEnemy()
     {
         var waitForTwoSeconds = new WaitForSeconds(2);
 

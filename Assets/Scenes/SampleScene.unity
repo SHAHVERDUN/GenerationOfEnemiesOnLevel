@@ -169,7 +169,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _enemyPrefab: {fileID: 2748690496635921983, guid: 421a1a4f97070704e804a0723adbf85f, type: 3}
-  _spawnPath: {fileID: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -223,7 +222,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 6.2223268
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
